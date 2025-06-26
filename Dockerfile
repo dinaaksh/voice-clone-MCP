@@ -4,7 +4,6 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN pip install uv
 
 COPY requirements.txt /app/
 
@@ -16,4 +15,4 @@ RUN mkdir -p /app/audio
 
 EXPOSE 7860
 
-CMD ["uv", "run", "clone-new.py"]
+CMD ["python", "clone-new.py"]
