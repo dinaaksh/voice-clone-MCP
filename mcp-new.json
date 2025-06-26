@@ -1,0 +1,18 @@
+{
+    "mcpServers": {
+      "terminal_server": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "--init",
+          "-e", "DOCKER_CONTAINER=true",
+          "-p", "8000:8000",
+          "-v", "/voices:/app/audio",
+          "mcpserver"
+        ]
+      }
+    }
+  }
+  
