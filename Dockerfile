@@ -3,8 +3,9 @@ FROM python:3.11-slim
 ENV PYTHONUNBUFFERED=1
 ENV HF_HOME=/home/user/huggingface
 ENV NUMBA_CACHE_DIR=/home/user/numba_cache
+ENV TTS_CACHE_DIR=/home/user/tts_cache
 
-RUN mkdir -p /home/user/huggingface /home/user/numba_cache && chmod -R 777 /home/user/huggingface /home/user/numba_cache
+RUN mkdir -p /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts && chmod -R 777 /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts
 
 WORKDIR /app
 

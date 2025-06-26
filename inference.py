@@ -1,6 +1,9 @@
 import asyncio
 import os
 import logging
+from dotenv import load_dotenv
+load_dotenv()
+os.environ['TTS_CACHE_DIR'] = '/home/user/tts_cache'
 
 tts=None
 logging.basicConfig(level=logging.INFO)
