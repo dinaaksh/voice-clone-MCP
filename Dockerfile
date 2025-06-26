@@ -5,8 +5,9 @@ ENV HF_HOME=/home/user/huggingface
 ENV NUMBA_CACHE_DIR=/home/user/numba_cache
 ENV TTS_CACHE_DIR=/home/user/tts_cache
 
-RUN mkdir -p /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts && chmod -R 777 /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts
-
+RUN mkdir -p /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts && \
+    chmod -R 777 /home/user/huggingface /home/user/numba_cache /home/user/.local/share /home/user/.local/share/tts
+    
 WORKDIR /app
 
 COPY requirements.txt /app/
