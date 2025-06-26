@@ -4,10 +4,11 @@ ENV PYTHONUNBUFFERED=1
 ENV HF_HOME=/home/user/huggingface
 ENV NUMBA_CACHE_DIR=/home/user/numba_cache
 ENV TTS_CACHE_DIR=/home/user/tts_cache
+ENV MPLCONFIGDIR=/home/user/.config/matplotlib
 
-RUN mkdir -p /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts && \
-    chmod -R 777 /home/user/huggingface /home/user/numba_cache /home/user/.local/share /home/user/.local/share/tts
-    
+RUN mkdir -p /home/user/huggingface /home/user/numba_cache /home/user/.local/share/tts /home/user/.config/matplotlib && \
+    chmod -R 777 /home/user/huggingface /home/user/numba_cache /home/user/.local /home/user/.local/share /home/user/.local/share/tts /home/user/.config/matplotlib
+
 WORKDIR /app
 
 COPY requirements.txt /app/
