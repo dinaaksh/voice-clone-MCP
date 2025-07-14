@@ -10,3 +10,6 @@ wheels/
 .venv
 /model
 /voices
+client.py
+hf_mcp.json
+.env
